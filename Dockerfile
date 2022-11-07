@@ -3,4 +3,4 @@ RUN yum install -y iproute traceroute httpd
 RUN systemctl enable httpd
 COPY tmpdir/test.txt /home/
 COPY tmpdir/yum.conf /home/
-ENTRYPOINT tail -f /dev/null
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
