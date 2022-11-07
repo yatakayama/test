@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.6-990
+FROM registry.redhat.io/rhel8/httpd-24
 RUN yum install -y iproute httpd
 RUN systemctl enable httpd
 ENTRYPOINT tail -f /dev/null
